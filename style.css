@@ -12,6 +12,8 @@
 .grid-items{
   display:flex;
   flex: 1;
+  height : 1px;
+  width : auto;
   padding: .9em;
   text-align: center;
   margin: 5px;
