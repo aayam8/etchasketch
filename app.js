@@ -1,10 +1,17 @@
+const DEFAULT_SIZE = 16;
+
+let currentSize = DEFAULT_SIZE;
+
 const container = document.getElementById('board');
-const container = document.getElementById('clear')
+const clsBtn = document.getElementById('clear');
+const sizeBtn = document.getElementById('size'); 
 
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
 
+clsBtn.onclick = () => clear();
+sizeBtn.onclick = () => setSize();
 
 
 function makeGrid(size) {
@@ -25,5 +32,14 @@ function draw(d) {
   }
 };
 
+function clear(){
+  container.innerHTML = '';
+  makeGrid(currentSize);
+}
 
-makeGrid(16); // Single is enough as we are creating a square
+function setSize(){
+  currentSize = sizeBtn.value;
+  container.innerHTML = '';
+  makeGrid(parseInt(currentSize));
+}
+makeGrid(DEFAULT_SIZE); // Single is enough as we are creating a square

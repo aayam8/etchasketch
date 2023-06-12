@@ -19,11 +19,21 @@
   border: 1px solid black;
 }
 
-.clear{
+#clear{
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
   height: 30px;
   width : 70px;
+}
+
+#size{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width : 70px;
+  margin-top: 20px;
 }
