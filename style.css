@@ -28,7 +28,7 @@
   width : 70px;
 }
 
-#size{
+#size16 , #size32{
   display: flex;
   flex: 1;
   justify-content: center;
